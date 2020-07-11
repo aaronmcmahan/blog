@@ -7,7 +7,7 @@ module.exports = {
     description:
       'I am a software engineer based in San Diego, CA specializing in building exceptional websites, applications and everything in between.',
     keywords: 'gatsbyjs, gatsby, javascript, aaron, mcmahan, software',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    siteUrl: '',
     author: {
       name: 'Aaron McMahan',
       url: 'https://twitter.com/awmcmahan',
