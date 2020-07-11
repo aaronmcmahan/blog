@@ -8,6 +8,8 @@ const StyledContainer = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
   width: auto;
   max-width: ${getEmSize(widths.lg)}em;
 `

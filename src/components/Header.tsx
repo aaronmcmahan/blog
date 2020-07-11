@@ -1,16 +1,15 @@
-import * as React from 'react'
+import React from 'react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import { Link } from 'gatsby'
 
-import { heights, dimensions, colors } from '../styles/variables'
+import { colors } from '../styles/variables'
 import Container from './Container'
 
 const StyledHeader = styled.header`
-  height: ${heights.header}px;
-  padding: 0 ${dimensions.containerPadding}rem;
-  background-color: ${colors.brand};
-  color: ${transparentize(0.5, colors.white)};
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 70px;
 `
 
 const HeaderInner = styled(Container)`
@@ -18,16 +17,48 @@ const HeaderInner = styled(Container)`
   flex-direction: row;
   align-items: center;
   height: 100%;
+  width: 100%;
 `
 
-const HomepageLink = styled(Link)`
-  color: ${colors.white};
-  font-size: 1.5rem;
-  font-weight: 600;
+const HeaderItemList = styled.ul`
+  list-style: none;
+  margin-left: auto;
+`
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
+const HeaderItem = styled.li`
+  display: inline-block;
+  padding: 0 15px;
+`
+
+const HeaderLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  transition: background-color 0.1s;
+  color: white;
+  height: 60px;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 40px;
+  max-width: 80px;
+`
+
+const HeaderButton = styled.button`
+  border: 4px solid ${colors.blue};
+  background-color: ${colors.darker};
+  color: ${colors.blue};
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 21px;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  margin-left: 1rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover {
+    background-color: ${colors.blue};
+    color: white;
   }
 `
 
@@ -35,12 +66,25 @@ interface HeaderProps {
   title: string
 }
 
-const Header: React.FC<HeaderProps> = ({ title }) => (
-  <StyledHeader>
-    <HeaderInner>
-      <HomepageLink to="/">{title}</HomepageLink>
-    </HeaderInner>
-  </StyledHeader>
-)
+const Header: React.FC<HeaderProps> = ({ title }) => {
+  // const [page, setPage] = useState('')
 
+  return (
+    <StyledHeader>
+      <HeaderInner>
+        <HeaderItemList>
+          <HeaderItem>
+            <HeaderLink to="/">About</HeaderLink>
+          </HeaderItem>
+          <HeaderItem>
+            <HeaderLink to="/blog">Blog</HeaderLink>
+          </HeaderItem>
+          <HeaderItem>
+            <HeaderButton>Resume</HeaderButton>
+          </HeaderItem>
+        </HeaderItemList>
+      </HeaderInner>
+    </StyledHeader>
+  )
+}
 export default Header

@@ -1,30 +1,19 @@
 /* eslint-disable max-len */
 
 export const colors = {
-  brand: '#663399',
-  lilac: '#9d7cbf',
-  accent: '#ffb238',
-  success: '#37b635',
-  warning: '#ec1818',
-  ui: {
-    bright: '#e0d6eb',
-    light: '#f5f3f7',
-    whisper: '#fbfafc'
-  },
-  code: '#fcf6f0',
-  gray: {
-    dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
-    copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
-    calm: 'rgba(0, 0, 0, 0.54)'
-  },
-  white: '#fff',
-  black: '#000'
+  dark: '#2C313A',
+  darker: '#21252B',
+  black: '#000000',
+  white: '#FFFFFF',
+  blue: '#4D78CC',
+  light: '#F8FAFD',
+  grey: '#DCDCDC',
+  darkGray: '#839496',
+  coral: '#e06c75'
 }
 
 export const fonts = {
-  sansSerif:
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif',
-  serif: 'Georgia, "Times New Roman", Times, serif',
+  sansSerif: 'Roboto',
   monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
 }
 
@@ -48,9 +37,9 @@ export const dimensions = {
     large: 18
   },
   headingSizes: {
-    h1: 2.441,
-    h2: 1.953,
-    h3: 1.563,
+    h1: 4,
+    h2: 3,
+    h3: 2,
     h4: 1.25
   },
   lineHeight: {
@@ -61,5 +50,5 @@ export const dimensions = {
 }
 
 export const heights = {
-  header: 60
+  header: 150
 }

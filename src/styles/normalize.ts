@@ -2,6 +2,9 @@ import { dimensions, fonts, colors, breakpoints } from './variables'
 import { getEmSize } from './mixins'
 
 export default `
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
   html {
     box-sizing: border-box;
   }
@@ -22,14 +25,14 @@ export default `
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: ${fonts.sansSerif};
-    color: ${colors.black};
-    background-color: ${colors.white};
+    color: ${colors.grey};
+    background-color: ${colors.darker};
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
 
   a {
-    color: ${colors.brand};
+
     text-decoration: none;
 
     &:hover,
@@ -55,7 +58,7 @@ export default `
   table {
     width: 100%;
     margin-bottom: 1rem;
-    border: 1px solid ${colors.ui.light};
+
     font-size: 85%;
     border-collapse: collapse;
   }
@@ -63,25 +66,14 @@ export default `
   td,
   th {
     padding: .25rem .5rem;
-    border: 1px solid ${colors.ui.light};
+
   }
 
   th {
     text-align: left;
   }
 
-  tbody {
-    tr {
-      &:nth-of-type(odd) {
-        td {
-          background-color: ${colors.ui.whisper};
-        }
-        tr {
-          background-color: ${colors.ui.whisper};
-        }
-      }
-    }
-  }
+
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.414rem;
@@ -137,14 +129,13 @@ export default `
     position: relative;
     margin: 1.5rem 0;
     border: 0;
-    border-top: 1px solid ${colors.ui.light};
+
   }
 
   blockquote {
     margin: .8rem 0;
     padding: .5rem 1rem;
-    border-left: .25rem solid ${colors.ui.light};
-    color: ${colors.gray.calm};
+
 
     p {
       &:last-child {
@@ -157,4 +148,13 @@ export default `
       padding-left: 1.25rem;
     }
   }
+
+.rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"]:after {
+  border-right: none;
+}
+.rwt__tablist[aria-orientation="vertical"] .rwt__tab[aria-selected="true"] {
+  border-left: 5px solid ${colors.coral};
+  color: ${colors.white};
+  font-weight: bold;
+}
 `

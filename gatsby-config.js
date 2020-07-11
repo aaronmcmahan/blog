@@ -2,14 +2,16 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
+    title: 'Aaron McMahan.',
+    tagline: 'I build things for the web',
+    description:
+      'I am a software engineer based in San Diego, CA specializing in building exceptional websites, applications and everything in between.',
+    keywords: 'gatsbyjs, gatsby, javascript, aaron, mcmahan, software',
     siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
+      name: 'Aaron McMahan',
+      url: 'https://twitter.com/awmcmahan',
+      email: 'awmcmahan@outlook.com'
     }
   },
   plugins: [
