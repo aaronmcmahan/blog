@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
 import profileImg from '../static/images/profile.png'
 import SectionTitle from './SectionTitle'
+import { useStaticQuery, graphql } from 'gatsby'
 const StyledAboutContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +54,30 @@ const StyledListItem = styled.li`
   }
 `
 
+interface ProfileQuery {
+  allFile: {
+    edges: [
+      {
+        node: {
+          publicURL: string
+        }
+      }
+    ]
+  }
+}
+
 const About = () => {
+  const data: ProfileQuery = useStaticQuery(graphql`
+    query ProfileQuery {
+      allFile(filter: { name: { eq: "profile" } }) {
+        edges {
+          node {
+            publicURL
+          }
+        }
+      }
+    }
+  `)
   return (
     <StyledAboutContainer>
       <SectionTitle text="About me" />
@@ -82,7 +106,7 @@ const About = () => {
           </StyledList>
         </div>
       </StyledAbout>
-      <StyledImage src={profileImg} /> <StyledImgDecoration />
+      <StyledImage src={data.allFile.edges[0].node.publicURL} /> <StyledImgDecoration />
     </StyledAboutContainer>
   )
 }

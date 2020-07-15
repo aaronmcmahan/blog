@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-  pathPrefix: "/blog",
+  pathPrefix: '/blog',
   siteMetadata: {
     title: 'Aaron McMahan.',
     tagline: 'I build things for the web',
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         name: 'content',
         path: `${__dirname}/src/content`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'static',
+        path: `${__dirname}/src/static`
       }
     },
     {
