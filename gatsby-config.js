@@ -1,6 +1,7 @@
 'use strict'
 
 module.exports = {
+  pathPrefix: "/blog",
   siteMetadata: {
     title: 'Aaron McMahan.',
     tagline: 'I build things for the web',
