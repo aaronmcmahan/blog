@@ -7,7 +7,7 @@ module.exports = {
     description:
       'I am a software engineer based in San Diego, CA specializing in building exceptional websites, applications and everything in between.',
     keywords: 'gatsbyjs, gatsby, javascript, aaron, mcmahan, software',
-    siteUrl: 'https://aaronmcmahan.github.io',
+    siteUrl: 'https://aaronmcmahan.com',
     author: {
       name: 'Aaron McMahan',
       url: 'https://twitter.com/awmcmahan',
