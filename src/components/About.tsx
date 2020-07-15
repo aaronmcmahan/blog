@@ -67,17 +67,17 @@ interface ProfileQuery {
 }
 
 const About = () => {
-  const data: ProfileQuery = useStaticQuery(graphql`
-    query ProfileQuery {
-      allFile(filter: { name: { eq: "profile" } }) {
-        edges {
-          node {
-            publicURL
-          }
-        }
-      }
-    }
-  `)
+  // const data: ProfileQuery = useStaticQuery(graphql`
+  //   query ProfileQuery {
+  //     allFile(filter: { name: { eq: "profile" } }) {
+  //       edges {
+  //         node {
+  //           publicURL
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <StyledAboutContainer>
       <SectionTitle text="About me" />
@@ -106,7 +106,8 @@ const About = () => {
           </StyledList>
         </div>
       </StyledAbout>
-      <StyledImage src={data.allFile.edges[0].node.publicURL} /> <StyledImgDecoration />
+      {/* <StyledImage src={data.allFile.edges[0].node.publicURL} /> <StyledImgDecoration /> */}
+      <StyledImage src={profileImg} /> <StyledImgDecoration />
     </StyledAboutContainer>
   )
 }
