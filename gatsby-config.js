@@ -2,6 +2,7 @@
 
 module.exports = {
   siteMetadata: {
+    pathPrefix: '/blog',
     title: 'Aaron McMahan.',
     tagline: 'I build things for the web',
     description:
