@@ -82,31 +82,31 @@ const About = () => {
     <StyledAboutContainer>
       <SectionTitle text="About me" />
       <StyledAbout>
-        Hello! I'm Aaron, a software engineer based in San Diego, CA. I enjoy creating things that live on the internet, whether that be
-        websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant
-        experiences.
+        Hello! I'm Aaron, a systems administrator based in San Diego, CA. I enjoy creating elegant solutions to complex problems. my goal is
+        to always find the right solutions and make people successful.
         <br />
         <br />
-        Shortly after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety
-        of interesting and meaningful projects on a daily basis.
+        Shortly after moving to sunny San Diego, I joined the computer labs team at UCSD where I work on a wide variety of interesting and
+        meaningful projects on a daily basis.
         <br />
         <br />
-        Here are a few technologies I've been working with recently:
+        Here are a few technologies that I have been working with lately:
         <div style={{ display: 'flex' }}>
           <StyledList>
-            <StyledListItem>Javascript (ES6+)</StyledListItem>
-            <StyledListItem>JS</StyledListItem>
-            <StyledListItem>AJAX</StyledListItem>
+            <StyledListItem>.NET Core</StyledListItem>
+            <StyledListItem>Node.JS</StyledListItem>
+            <StyledListItem>PowerShell</StyledListItem>
+            <StyledListItem>GraphQL</StyledListItem>
           </StyledList>
 
           <StyledList>
-            <StyledListItem>CSS</StyledListItem>
-            <StyledListItem>JS</StyledListItem>
-            <StyledListItem>AJAX</StyledListItem>
+            <StyledListItem>AWS/Azure</StyledListItem>
+            <StyledListItem>Jenkins</StyledListItem>
+            <StyledListItem>Docker</StyledListItem>
+            <StyledListItem>SCCM</StyledListItem>
           </StyledList>
         </div>
       </StyledAbout>
-      {/* <StyledImage src={data.allFile.edges[0].node.publicURL} /> <StyledImgDecoration /> */}
       <StyledImage src={profileImg} /> <StyledImgDecoration />
     </StyledAboutContainer>
   )

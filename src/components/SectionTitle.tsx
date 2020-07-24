@@ -9,6 +9,9 @@ const StyledTitle = styled.h2`
   display: flex;
   width: 100%;
   margin-bottom: 2rem;
+  @media (max-width: 30em) {
+    font-size: 50px;
+  }
 `
 
 const StyledLine = styled.span`
@@ -22,7 +25,7 @@ interface SectionTitleProps {
   text: string
 }
 
-const SectionTitle: React.FC<SectionTitleProps> = props => (
+const SectionTitle: React.FC<SectionTitleProps> = (props) => (
   <StyledTitle>
     {props.text} <StyledLine />
   </StyledTitle>

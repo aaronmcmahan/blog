@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
 import { colors } from '../styles/variables'
+import { media } from '../styles'
 
 const StyledHero = styled.div`
   display: flex;
@@ -14,10 +15,15 @@ const StyledHero = styled.div`
   margin-bottom: 10vh;
 `
 
-const StyledIntro = styled.p`
-  margin: 0;
+const StyledIntro = styled.h1`
   color: ${colors.coral};
-  font-size: 1.5rem;
+
+  margin: 0 0 20px 3px;
+  font-size: ${fontSizes.md};
+  font-family: ${fonts.SFMono};
+  font-weight: normal;
+  ${media.desktop`font-size: ${fontSizes.sm};`};
+  ${media.tablet`font-size: ${fontSizes.smish};`};
 `
 
 const StyledTitle = styled.h1`
@@ -26,12 +32,25 @@ const StyledTitle = styled.h1`
   padding: 0;
   font-weight: 700;
   color: ${colors.white};
+  ${media.desktop`font-size: 70px;`};
+  ${media.tablet`font-size: 60px;`};
+  ${media.phablet`font-size: 50px;`};
+  ${media.phone`font-size: 40px;`};
 `
 const StyledTagline = styled.h3`
-  margin: 0 0 2rem 0;
-  font-size: 3rem;
-  font-weight: 400;
   color: ${colors.darkGray};
+  ${media.desktop`font-size: 70px;`};
+  ${media.tablet`font-size: 60px;`};
+  ${media.phablet`font-size: 50px;`};
+  ${media.phone`font-size: 40px;`};
+
+  font-size: 80px;
+  line-height: 1.1;
+
+  ${media.desktop`font-size: 70px;`};
+  ${media.tablet`font-size: 60px;`};
+  ${media.phablet`font-size: 50px;`};
+  ${media.phone`font-size: 40px;`};
 `
 
 const StyledDescription = styled.p`

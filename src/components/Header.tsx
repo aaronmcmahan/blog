@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import { colors } from '../styles/variables'
 import Container from './Container'
@@ -30,18 +30,18 @@ const HeaderItem = styled.li`
   padding: 0 15px;
 `
 
-const HeaderLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  transition: background-color 0.1s;
-  color: white;
-  height: 60px;
-  font-size: 18px;
-  text-decoration: none;
-  text-align: center;
-  padding: 0 40px;
-  max-width: 80px;
-`
+// const HeaderLink = styled(Link)`
+//   display: flex;
+//   align-items: center;
+//   transition: background-color 0.1s;
+//   color: white;
+//   height: 60px;
+//   font-size: 18px;
+//   text-decoration: none;
+//   text-align: center;
+//   padding: 0 40px;
+//   max-width: 80px;
+// `
 
 const HeaderButton = styled.button`
   border: 4px solid ${colors.blue};
@@ -67,18 +67,16 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
-  // const [page, setPage] = useState('')
-
   return (
     <StyledHeader>
       <HeaderInner>
         <HeaderItemList>
-          <HeaderItem>
+          {/* <HeaderItem>
             <HeaderLink to="/">About</HeaderLink>
           </HeaderItem>
           <HeaderItem>
             <HeaderLink to="/blog">Blog</HeaderLink>
-          </HeaderItem>
+          </HeaderItem> */}
           <HeaderItem>
             <HeaderButton>Resume</HeaderButton>
           </HeaderItem>

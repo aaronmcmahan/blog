@@ -32,18 +32,20 @@ export const Employment = () => {
       <StyledTabs defaultTab="ucsd" vertical>
         <StyledTabList>
           <StyledTab tabFor="ucsd">University of California, San Diego</StyledTab>
-          <StyledTab tabFor="pbvusd">Panama - Buena Vista Union School District</StyledTab>
+          <StyledTab tabFor="pbvusd">Panama-Buena Vista Union School District</StyledTab>
           <StyledTab tabFor="ls">Lightspeed Systems</StyledTab>
           <StyledTab tabFor="chartec">Chartec, LLC</StyledTab>
         </StyledTabList>
         <StyledTabPanel tabId="ucsd">
           <EmploymentDetail
-            title="Systems Analyst"
+            title="System Administrator/Programmer"
             employer="University of California, San Diego"
             duration="Jul 2019 - Present"
             highlights={[
-              'Programmed Occasionally',
-              'Gathered lab usage analytics to provide insight into how the funding should be allocated'
+              'Managed 200+ physical and virtual labs',
+              'Automated as much as possible with PowerShell',
+              'Setup remote image deployment',
+              'Developed internal applications as needed'
             ]}
           />
         </StyledTabPanel>
@@ -51,8 +53,13 @@ export const Employment = () => {
           <EmploymentDetail
             title="Database Administrator"
             employer="Panama-Buena Vista Union School District"
-            duration="Aug 2014 -  Jul 2019"
-            highlights={['Programmed Occasionally', 'Managed Labs']}
+            duration="Aug 2014 - Jul 2019"
+            highlights={[
+              'Owned production databases',
+              'Act as a final escalation for support techs',
+              'Automated staff on boarding and off boarding',
+              'Setup JAMF and GAFE for the district'
+            ]}
           />
         </StyledTabPanel>
         <StyledTabPanel tabId="ls">
@@ -60,7 +67,10 @@ export const Employment = () => {
             title="Technical Support Specialist"
             employer="Lightspeed Systems"
             duration="Mar 2013 - Aug 2014"
-            highlights={['Programmed Occasionally', 'Managed Labs']}
+            highlights={[
+              'Supported content filters, MDM, firewalls, spam filters, email archiving and proxies all in a customer’s production environment',
+              'Managed a heavy ticket workload using Salesforce'
+            ]}
           />
         </StyledTabPanel>
         <StyledTabPanel tabId="chartec">
@@ -68,7 +78,7 @@ export const Employment = () => {
             title="Technical Support Specialist"
             employer="Chartec, LLC"
             duration="Jul 2012 - Feb 2013"
-            highlights={['Programmed Occasionally', 'Managed Labs']}
+            highlights={['Support customers leased backup server', 'Assist customer with data recovery in the event of a disaster']}
           />
         </StyledTabPanel>
       </StyledTabs>

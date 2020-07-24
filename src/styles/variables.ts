@@ -33,8 +33,10 @@ export const widths = {
 
 export const dimensions = {
   fontSize: {
-    regular: 16,
-    large: 18
+    xs: 12,
+    sm: 14,
+    md: 16,
+    lg: 18
   },
   headingSizes: {
     h1: 4,
