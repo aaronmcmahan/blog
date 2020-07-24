@@ -31,6 +31,7 @@ export const widths = {
   xl: 1140
 }
 
+// various dimensions for the layout
 export const dimensions = {
   fontSize: {
     xs: 12,
